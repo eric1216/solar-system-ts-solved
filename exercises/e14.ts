@@ -1,8 +1,12 @@
+import { Asteroid } from '../data/data';
+
 // SPACE DATA EXERCISE 14
 // Return the sum of orbital periods of all asteroids
 // Return example: 234234.234
 
-export function getOrbitalPeriodsSum(asteroids) {}
+export function getOrbitalPeriodsSum(asteroids: Asteroid[]) {
+  return asteroids.reduce((sum, { orbitalPeriod }) => sum + orbitalPeriod, 0);
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"

@@ -1,7 +1,19 @@
+import { Planet } from '../data/data';
+
 // SPACE DATA EXERCISE 8
 // Return a Planet by a given moon name
 //  must have destructured parameters
-export function findPlanetByMoon({ planets, moonName }) {}
+
+type PropTypes = {
+  planets: Planet[];
+  moonName: string;
+};
+
+export function findPlanetByMoon({ planets, moonName }: PropTypes) {
+  return planets.find(
+    ({ moons }) => moons && moons.some((moon) => moon.toLowerCase() === moonName.toLowerCase())
+  );
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"

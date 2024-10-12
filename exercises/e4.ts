@@ -1,8 +1,12 @@
+import { Planet } from '../data/data';
+
 // SPACE DATA EXERCISE 4
 // Return an array of Planets' names with gravity less than 10
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetNamesWithLowGravity(planets) {}
+export function getPlanetNamesWithLowGravity(planets: Planet[]) {
+  return planets.filter(({ gravity }) => gravity < 10).map(({ name }) => name);
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"

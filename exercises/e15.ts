@@ -1,7 +1,11 @@
+import { Planet } from '../data/data';
+
 // SPACE DATA EXERCISE 15
 // Return an array of Planets' without moons
 
-export function getPlanetsWithNoMoons(planets) {}
+export function getPlanetsWithNoMoons(planets: Planet[]) {
+  return planets.filter(({ moons, moonsCount }) => !moons && !moonsCount);
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-15"
